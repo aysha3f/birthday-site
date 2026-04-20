@@ -55,8 +55,7 @@ export default function BirthdayWebsite() {
         <p className="eyebrow">A special celebration for Sakil Bhaiya</p>
         <h1>Happy Birthday, Sakil Bhaiya!</h1>
         <p className="hero-copy">
-          Today we celebrate your warmth, leadership, and the countless memories that make you unforgettable. Enjoy the music,
-          memories, and a little surprise designed just for you.
+          Today I just want to celebrate you, Bhaiya—your warmth, your care, and the way you always lead and protect everyone around you. I have so many beautiful memories with you that I’ll always cherish. I hope you enjoy the music, smile at the memories, and find a little surprise I made just for you.
         </p>
       </motion.header>
 
