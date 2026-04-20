@@ -1,0 +1,196 @@
+﻿:root {
+  color-scheme: dark;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f172a;
+  color: #0f172a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(99, 102, 241, 0.18), transparent 24%),
+    radial-gradient(circle at 20% 10%, rgba(236, 72, 153, 0.14), transparent 18%),
+    linear-gradient(180deg, #0e1726 0%, #111827 100%);
+  color: #0f172a;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.app-shell {
+  min-height: 100vh;
+  padding: 3rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.hero-banner {
+  width: min(100%, 960px);
+  padding: 2.25rem 2.5rem;
+  border-radius: 2rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.24);
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.9rem;
+  display: inline-flex;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #c7d2fe;
+}
+
+.hero-banner h1 {
+  margin: 0;
+  font-size: clamp(2.75rem, 4vw, 4.5rem);
+  line-height: 0.98;
+  color: #fff;
+}
+
+.hero-copy {
+  margin: 1rem auto 0;
+  max-width: 760px;
+  font-size: 1.05rem;
+  color: #d8dcff;
+  letter-spacing: -0.01em;
+}
+
+.content-grid {
+  width: min(100%, 1100px);
+  display: grid;
+  grid-template-columns: minmax(280px, 1.05fr) minmax(320px, 0.95fr);
+  gap: 1.75rem;
+}
+
+.photo-card,
+.message-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 1.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(15, 23, 42, 0.05);
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+.photo-caption {
+  margin: 1rem 0 0;
+  color: #475569;
+  font-size: 0.98rem;
+  text-align: center;
+}
+
+.message-panel h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1.55rem;
+  color: #0f172a;
+}
+
+.message-panel p {
+  margin: 0;
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.actions {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.action-button {
+  width: 100%;
+  max-width: 320px;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.22);
+}
+
+.action-button:hover,
+.action-button:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.hint-text {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.toast-banner {
+  margin-top: 1rem;
+  padding: 0.95rem 1.25rem;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #f8fafc;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 20px 35px rgba(37, 99, 235, 0.2);
+}
+
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .app-shell {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .hero-banner {
+    padding: 1.75rem 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .photo-card,
+  .message-card {
+    padding: 1.25rem;
+    border-radius: 1.4rem;
+  }
+}
