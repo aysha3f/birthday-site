@@ -27,7 +27,12 @@ export default function BirthdayWebsite() {
 
   const handleSurprise = () => {
     const audio = document.getElementById("bg-music");
-    audio?.play();
+    if (audio) {
+      audio.play().catch((err) => {
+        console.error("Audio playback failed:", err);
+        alert("Music could not play. Check your volume or browser settings.");
+      });
+    }
 
     confetti({
       particleCount: 220,
@@ -111,7 +116,7 @@ export default function BirthdayWebsite() {
         </section>
       </motion.main>
 
-      <audio id="bg-music" loop>
+      <audio id="bg-music" loop preload="auto">
         <source src="/mixkit-birthday-gift-791.mp3" type="audio/mpeg" />
       </audio>
     </div>
